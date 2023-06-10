@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: ''
+  baseURL: 'https://edu-cate.onrender.com/api/v1'
 });
 
 export const getCourses = () => API.get('/courses');

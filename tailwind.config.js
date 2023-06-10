@@ -19,12 +19,19 @@ module.exports = {
         fadeIn: 'fadeIn .25s ease-in',
         slideDown: 'slideDown 0.3s ease-in',
       },
+      colors:{
+        primary: '#fc4f13'
+      },
+      backgroundColor: {
+        primary: '#fc4f13',
+        secondary: '#27153E'
+      }
     },
     backgroundImage:{
       "teachBg": "url('/src/assets/teach.svg')",
       "loginBg": "url('/src/assets/desktop.jpg')",
       "registerBg": "url('/src/assets/register.png')"
-    }
+    },
   },
   plugins: [],
 }
