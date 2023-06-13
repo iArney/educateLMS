@@ -29,9 +29,10 @@ const Login = () => {
         data = await api.loginInstructor(formData);
       }
 
-      return data.reponse.data;
+      console.log(data)
+      return data.data;
     } catch (error) {
-      console.log(error.response.data)
+      console.log(error)
     }
   };
   useEffect(() => {}, [email, password]);
