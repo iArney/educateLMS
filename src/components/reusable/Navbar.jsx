@@ -12,29 +12,19 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <div className='flex h-16 w-full px-6 z-20 md:px-14 justify-between items-center sticky top-0 bg-white'>
+    <header className='bg-white flex h-16 w-full px-6 z-20 md:px-14 justify-between items-center sticky top-0 border-b'>
       <img src={Logo} className='h-10' alt='educate-logo' />
-      <div className='hidden lg:flex w-3/6 items-center justify-between h-full'>
-        <ul className='flex items-center justify-center w-fit h-full space-x-4'>
-          <li className='h-full flex w-20 items-center justify-center p-2'>Home</li>
-          <li className='h-full flex items-center justify-center p-2'>About Us</li>
-          <li className='h-full flex items-center justify-center p-2'>Contact Us</li>
-        </ul>
-        <div className='flex items-center justify-center space-x-10 p-2 h-full'>
-          <div
-            className='p-2 bg-gray-200/60 rounded-md cursor-pointer'
-            onClick={() => navigate('/login')}
-          >
-            Sign In
-          </div>
-          <div
-            className='p-2 bg-orange-600 text-white rounded-md cursor-pointer'
-            onClick={() => navigate('/userAccess')}
-          >
-            Sign Up
-          </div>
-        </div>
-      </div>
+      <ul className='hidden lg:flex items-center justify-between gap-x-6 h-full'>
+        <li className='cursor-pointer'>Home</li>
+        <li className='cursor-pointer'>Features</li>
+        <li className='cursor-pointer'>About Us</li>
+        <li className='btn bg-secondary' onClick={() => navigate('/login')}>
+          Sign In
+        </li>
+        <li className='btn bg-primary' onClick={() => navigate('/userAccess')}>
+          Sign Up
+        </li>
+      </ul>
 
       {/* for small devices */}
       <div className='w-fit h-fit py-4 px-3 lg:hidden' onClick={handleNav}>
@@ -70,7 +60,7 @@ const Navbar = () => {
           ''
         )}
       </div>
-    </div>
+    </header>
   );
 };
 
